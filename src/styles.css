@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow: hidden;
+  background-color: #f7f4ed;
+  font-family: -apple-system, 'BlinkMacSystemFont', 'Helvetica Neue', 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Libre Franklin',
+    sans-serif;
+  color: #272727;
+}
+
+h1 {
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+a {
+  color: #008194;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.align {
+  text-align: right;
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+
+section {
+  position: absolute;
+  z-index: 2;
+  padding: 1rem;
+  width: 50vw;
+}
+
+.title {
+  top: 0;
+  left: 0;
+}
+
+.shortcut {
+  right: 0;
+  top: 0;
+}
+
+.created {
+  bottom: 0;
+  right: 0;
+}
+
+.social {
+  bottom: 0;
+  left: 0;
+}
+
+.social a {
+  padding: 0 8px;
+  fill: #6e6e6e;
+  transition: all 0.2s;
+}
+
+.social a:hover {
+  fill: #008194;
+}
+
+@media screen and (max-width: 700px) {
+  .align {
+    text-align: left;
+  }
+  .social a {
+    fill: #f7f4ed;
+  }
+  .created {
+    color: #f7f4ed;
+  }
+  .created a {
+    color: #f7f4ed;
+    text-decoration: underline;
+  }
+}
