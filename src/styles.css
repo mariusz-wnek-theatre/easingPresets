@@ -66,6 +66,7 @@ section {
   padding: 0 8px;
   fill: #6e6e6e;
   transition: all 0.2s;
+  text-decoration: none;
 }
 
 .social a:hover {
