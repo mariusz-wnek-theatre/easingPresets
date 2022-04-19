@@ -3,12 +3,6 @@
         "generator" : "Khronos glTF Blender I/O v1.8.19",
         "version" : "2.0"
     },
-    "extensionsUsed" : [
-        "KHR_texture_transform"
-    ],
-    "extensionsRequired" : [
-        "KHR_texture_transform"
-    ],
     "scene" : 0,
     "scenes" : [
         {
@@ -34,22 +28,7 @@
                     0.14309629797935486,
                     0.17882315814495087,
                     1
-                ],
-                "metallicRoughnessTexture" : {
-                    "extensions" : {
-                        "KHR_texture_transform" : {
-                            "offset" : [
-                                0,
-                                -0.2999999523162842
-                            ],
-                            "scale" : [
-                                1.2999999523162842,
-                                1.2999999523162842
-                            ]
-                        }
-                    },
-                    "index" : 0
-                }
+                ]
             }
         }
     ],
@@ -67,19 +46,6 @@
                     "material" : 0
                 }
             ]
-        }
-    ],
-    "textures" : [
-        {
-            "sampler" : 0,
-            "source" : 0
-        }
-    ],
-    "images" : [
-        {
-            "mimeType" : "image/jpeg",
-            "name" : "smudges3",
-            "uri" : "smudges3.jpg"
         }
     ],
     "accessors" : [
@@ -138,12 +104,6 @@
             "buffer" : 0,
             "byteLength" : 660,
             "byteOffset" : 7168
-        }
-    ],
-    "samplers" : [
-        {
-            "magFilter" : 9729,
-            "minFilter" : 9987
         }
     ],
     "buffers" : [
