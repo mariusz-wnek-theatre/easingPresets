@@ -6,6 +6,8 @@ import { getProject } from '@theatre/core';
 import studio from '@theatre/studio';
 import theatreObjects from './Experience/theatreObjects';
 
+console.log(process.env.NODE_ENV);
+
 studio.initialize();
 studio.ui.hide();
 const project = getProject('Project', { state });
