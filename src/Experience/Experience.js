@@ -7,6 +7,7 @@ import Renderer from './Renderer';
 import World from './World/World.js';
 import Resources from './Utils/Resources.js';
 import PostProcessing from './PostProcessing.js';
+import Stats from 'stats.js';
 
 import sources from './sources.js';
 
@@ -39,6 +40,9 @@ export default class Experience {
     this.renderer = new Renderer();
     //this.postProcessing = new PostProcessing();
     this.world = new World();
+    this.stats = new Stats();
+
+    this.setStats();
 
     // Resize event
     this.sizes.on('resize', () => {
@@ -51,15 +55,22 @@ export default class Experience {
     });
   }
 
+  setStats() {
+    this.stats.showPanel(1); // 0: fps, 1: ms, 2: mb, 3+: custom
+    document.body.appendChild(this.stats.dom);
+  }
+
   resize() {
     this.camera.resize();
     this.renderer.resize();
   }
 
   update() {
+    this.stats.begin();
     this.camera.update();
     this.world.update();
     this.renderer.update();
+    this.stats.end();
     //this.postProcessing.update();
   }
 
