@@ -7,6 +7,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 let webpack = require('webpack');
 
 module.exports = {
+  mode: 'production',
   entry: {
     index: './src/index.js',
   },
@@ -15,7 +16,6 @@ module.exports = {
     path: path.resolve(__dirname, './public'),
     publicPath: '',
   },
-  mode: 'production',
   module: {
     rules: [
       {
@@ -61,3 +61,5 @@ module.exports = {
     }),
   ],
 };
+
+console.log(`mode is: ${module.exports.mode}`);
