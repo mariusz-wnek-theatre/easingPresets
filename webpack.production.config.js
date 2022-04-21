@@ -8,14 +8,16 @@ let webpack = require('webpack');
 
 module.exports = {
   mode: 'production',
-  rules: [
-    {
-      test: /redux$/,
-      resolve: {
-        mainFields: ['module', 'main', 'unpkg'],
+  module: {
+    rules: [
+      {
+        test: /redux$/,
+        resolve: {
+          mainFields: ['module', 'main', 'unpkg'],
+        },
       },
-    },
-  ],
+    ],
+  },
   entry: {
     index: './src/index.js',
   },
