@@ -25,7 +25,5 @@ export default class YellowSphere {
     });
   }
 
-  update() {
-    this.model.position.x = this.experience.object.value.yellowSphereX;
-  }
+  update() {}
 }

@@ -25,7 +25,5 @@ export default class OrangeSphere {
     });
   }
 
-  update() {
-    this.model.position.x = this.experience.object.value.orangeSphereX;
-  }
+  update() {}
 }
