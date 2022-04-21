@@ -8,16 +8,6 @@ let webpack = require('webpack');
 
 module.exports = {
   mode: 'production',
-  module: {
-    rules: [
-      {
-        test: /redux$/,
-        resolve: {
-          mainFields: ['module', 'main', 'unpkg'],
-        },
-      },
-    ],
-  },
   entry: {
     index: './src/index.js',
   },
@@ -48,6 +38,12 @@ module.exports = {
           options: {
             presets: ['@babel/preset-env', '@babel/preset-react'],
           },
+        },
+      },
+      {
+        test: /redux$/,
+        resolve: {
+          mainFields: ['module', 'main', 'unpkg'],
         },
       },
     ],
