@@ -8,6 +8,9 @@ let webpack = require('webpack');
 
 module.exports = {
   mode: 'production',
+  resolve: {
+    mainFields: ['module', 'main', 'unpkg'],
+  },
   entry: {
     index: './src/index.js',
   },
@@ -61,5 +64,3 @@ module.exports = {
     }),
   ],
 };
-
-console.log(`mode is: ${module.exports.mode}`);
