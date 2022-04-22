@@ -1,0 +1,31 @@
+{
+  "files": ["./node_modules/@theatre/core/dist/index.d.ts"],
+  "compileOnSave": false,
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "ESNext",
+    "target": "ESNext",
+    "lib": ["es2017", "dom", "ESNext"],
+    "isolatedModules": true,
+    "noFallthroughCasesInSwitch": true,
+    "jsx": "react",
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "stripInternal": true,
+    // "emitDeclarationOnly": true,
+    "paths": {
+      "@theatre/core": ["./node_modules/@theatre/core/src/index.ts"],
+      "@theatre/studio": ["./node_modules/@theatre/studio/src/index.ts"],
+      "@theatre/studio/*": ["./node_modules/@theatre/tudio/src/*"],
+      "@theatre/core/*": ["./node_modules/@theatre/core/src/*"],
+      "@theatre/shared/*": ["./node_modules/@theatre/shared/src/*"],
+      "@theatre/dataverse": ["./node_modules/@theatre/dataverse/src/index.ts"]
+      //   "@theatre/dataverse-react": ["./packages/dataverse-react/src/index.ts"],
+      //   "@theatre/plugin-r3f": ["./packages/plugin-r3f/src/index.tsx"],
+      //   "@theatre/dataverse2": ["./packages/dataverse2/src/index.ts"]
+    },
+    "forceConsistentCasingInFileNames": true
+  }
+}

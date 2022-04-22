@@ -4,8 +4,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
+  resolve: {
+    alias: {
+      react: path.resolve('./node_modules/react'),
+    },
+  },
   entry: {
-    index: './src/index.js',
+    index: './src/index.tsx',
   },
   output: {
     filename: 'bundle.js',

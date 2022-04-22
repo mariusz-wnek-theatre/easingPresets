@@ -7,9 +7,14 @@ const CopyPlugin = require('copy-webpack-plugin');
 let webpack = require('webpack');
 
 module.exports = {
+  resolve: {
+    alias: {
+      react: path.resolve('./node_modules/react'),
+    },
+  },
   mode: 'production',
   entry: {
-    index: './src/index.js',
+    index: './src/index.tsx',
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -31,12 +36,16 @@ module.exports = {
         use: [MiniCssExtractPugin.loader, 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
+            presets: [
+              '@babel/preset-env',
+              '@babel/preset-react',
+              '@babel/preset-typescript',
+            ],
           },
         },
       },
@@ -45,6 +54,11 @@ module.exports = {
         resolve: {
           mainFields: ['module', 'main', 'unpkg'],
         },
+      },
+      {
+        test: /\.(ts|tsx|js|jsx)$/,
+        exclude: /node_modules/,
+        use: ['ts-loader'],
       },
     ],
   },
