@@ -11,10 +11,11 @@ module.exports = {
     alias: {
       react: path.resolve('./node_modules/react'),
     },
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   mode: 'production',
   entry: {
-    index: './src/index.tsx',
+    index: './src/index.js',
   },
   output: {
     filename: '[name].[contenthash].js',

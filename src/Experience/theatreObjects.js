@@ -1,4 +1,4 @@
-export default {
+let theatreObjects = {
   yellowSphereX: 0,
   orangeSphereX: 0,
   darkOrangeSphereX: 0,
@@ -8,3 +8,5 @@ export default {
   indicator2_2: 0,
   indicator3_1: 0,
 };
+
+export default theatreObjects;

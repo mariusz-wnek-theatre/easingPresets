@@ -1,10 +1,10 @@
 import './styles.css';
 import state from './state.json';
 
-import Experience from './Experience/Experience.js';
+let Experience = require('./Experience/Experience.js');
 import { getProject } from '@theatre/core';
 import studio from '@theatre/studio';
-import theatreObjects from './Experience/theatreObjects';
+let theatreObjects = require('./Experience/theatreObjects.js');
 
 console.log(process.env.NODE_ENV);
 
