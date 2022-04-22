@@ -1,16 +1,14 @@
-import './styles.css';
-import state from './state.json';
-
-let Experience = require('./Experience/Experience.js');
-import { getProject } from '@theatre/core';
+import 'regenerator-runtime/runtime';
 import studio from '@theatre/studio';
-let theatreObjects = require('./Experience/theatreObjects.js');
-
-console.log(process.env.NODE_ENV);
+import { getProject } from '@theatre/core';
+import theatreObjects from './Experience/theatreObjects';
+import state from './state.json';
+import Experience from './Experience/Experience';
 
 studio.initialize();
 studio.ui.hide();
-const project = getProject('Project', { state });
+
+const project = getProject('Project', state);
 const sheet = project.sheet('Scene');
 const theatreObject = sheet.object('First Object', theatreObjects);
 const sequence = sheet.sequence;
