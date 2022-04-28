@@ -1,25 +1,43 @@
 {
-  "name": "my-project",
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.1.1",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
   "scripts": {
-    "start": "parcel serve ./src/index.html",
-    "build": "parcel build ./src/index.html",
-    "browserslist": "> 0.5%, last 2 versions, not dead"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "parcel": "latest",
-    "stats-js": "^1.0.1"
-  },
-  "dependencies": {
-    "@theatre/core": "workspace:*",
-    "@theatre/studio": "workspace:*",
-    "@types/react": "^17.0.19",
-    "@types/react-dom": "^17.0.9",
-    "parcel-bundler": "^1.12.5",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "regenerator-runtime": "^0.13.9",
-    "stats.js": "^0.17.0",
-    "three": "^0.139.2",
-    "typescript": "^4.4.2"
+    "@theatre/core": "^0.4.7",
+    "@theatre/studio": "^0.4.7",
+    "three": "^0.139.2"
   }
 }
